@@ -1,0 +1,24 @@
+{
+  "name": "LearningGit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {},
+ "scripts": {
+  "start": "node index.js"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tatajaneji/learnningGit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tatajaneji/learnningGit/issues"
+  },
+  "homepage": "https://github.com/Tatajaneji/learnningGit#readme"
+}
