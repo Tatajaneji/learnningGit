@@ -1,10 +1,12 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
-app.use((req,res)=>{
-    res.send("Hello Express.js");
-})
+app.use(express.json());
 
-app.listen(8080,()=>{
-    console.log("Start server at port 8080")
-})
+app.get('/api/items',(req ,res) =>{
+    res.send('Product all');
+});
+
+app.listen(3000,()=>{
+    console.log('Server running on port 3000');
+});
