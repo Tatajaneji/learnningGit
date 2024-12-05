@@ -41,7 +41,20 @@ app.put('/api/items/:id',(req,res) => {
         data: item
     });
 })
+app.delete('/api/items/:id', (req, res) => {
+    const{id}=req.params;
+    const index = items.find(item=>item.id===Number(id)); //ตำแหน่งสินค้า ที่ต้องการลบ
 
+    if(index === -1){
+        return res.status(404).json({message: 'Product not found'});
+    }
+    const deleteItem = items.splice(index,1); // ลบสินค้าออกจากอาร์เรย์
+
+    res.status(200).json({
+        message: 'Product update',
+        data: deleteItem
+    });
+});
 
 app.listen(3000,()=>{
     console.log('Server running on port 3000');
